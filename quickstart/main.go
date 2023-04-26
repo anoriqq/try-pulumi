@@ -38,7 +38,7 @@ func main() {
 		}
 
 		// Create an S3 Bucket object
-		_, err = s3.NewBucketObjectv2(ctx, "index.html", &s3.BucketObjectv2Args{
+		_, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
 			Bucket:      bucket.ID(),
 			Source:      pulumi.NewFileAsset("./index.html"),
 			ContentType: pulumi.String("text/html"),
