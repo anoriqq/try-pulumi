@@ -13,6 +13,15 @@ func main() {
 			return err
 		}
 
+		// Create an S3 Bucket object
+		_, err = s3.NewBucketObjectv2(ctx, "index.html", &s3.BucketObjectv2Args{
+			Bucket: bucket.ID(),
+			Source: pulumi.NewFileAsset("./index.html"),
+		})
+		if err != nil {
+			return err
+		}
+
 		// Export the name of the bucket
 		ctx.Export("bucketName", bucket.ID())
 		return nil
