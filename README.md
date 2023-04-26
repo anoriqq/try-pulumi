@@ -95,3 +95,53 @@ update s3 bucket object to website
 https://app.pulumi.com/anoriqq/try-pulumi/dev/updates/4
 
 to get website url from output: http://my-bucket-31fe94a.s3-website-ap-northeast-1.amazonaws.com/
+
+destroy
+
+```sh
+~/repos/github.com/anoriqq/try-pulumi/quickstart feature/1
+❯ pulumi destroy
+Previewing destroy (dev)
+
+View in Browser (Ctrl+O): https://app.pulumi.com/anoriqq/try-pulumi/dev/previews/92944ba7-21e8-48c8-8d3c-3feb6fd6afdb
+
+     Type                               Name                 Plan
+ -   pulumi:pulumi:Stack                try-pulumi-dev       delete
+ -   ├─ aws:s3:BucketObjectv2           index.html           delete
+ -   ├─ aws:s3:BucketPublicAccessBlock  public-access-block  delete
+ -   ├─ aws:s3:BucketOwnershipControls  ownership-controls   delete
+ -   └─ aws:s3:Bucket                   my-bucket            delete
+
+
+Outputs:
+  - bucketEndpoint: "http://my-bucket-31fe94a.s3-website-ap-northeast-1.amazonaws.com"
+  - bucketName    : "my-bucket-31fe94a"
+
+Resources:
+    - 5 to delete
+
+Do you want to perform this destroy? yes
+Destroying (dev)
+
+View in Browser (Ctrl+O): https://app.pulumi.com/anoriqq/try-pulumi/dev/updates/5
+
+     Type                               Name                 Status
+ -   pulumi:pulumi:Stack                try-pulumi-dev       deleted
+ -   ├─ aws:s3:BucketObjectv2           index.html           deleted (1s)
+ -   ├─ aws:s3:BucketPublicAccessBlock  public-access-block  deleted (0.56s)
+ -   ├─ aws:s3:BucketOwnershipControls  ownership-controls   deleted (0.89s)
+ -   └─ aws:s3:Bucket                   my-bucket            deleted (0.54s)
+
+
+Outputs:
+  - bucketEndpoint: "http://my-bucket-31fe94a.s3-website-ap-northeast-1.amazonaws.com"
+  - bucketName    : "my-bucket-31fe94a"
+
+Resources:
+    - 5 deleted
+
+Duration: 5s
+
+The resources in the stack have been deleted, but the history and configuration associated with the stack are still maintained.
+If you want to remove the stack completely, run `pulumi stack rm dev`.
+```
