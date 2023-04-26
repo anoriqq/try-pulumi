@@ -93,3 +93,5 @@ https://app.pulumi.com/anoriqq/try-pulumi/dev/updates/3
 update s3 bucket object to website
 
 https://app.pulumi.com/anoriqq/try-pulumi/dev/updates/4
+
+to get website url from output: http://my-bucket-31fe94a.s3-website-ap-northeast-1.amazonaws.com/
