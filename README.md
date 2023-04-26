@@ -145,3 +145,27 @@ Duration: 5s
 The resources in the stack have been deleted, but the history and configuration associated with the stack are still maintained.
 If you want to remove the stack completely, run `pulumi stack rm dev`.
 ```
+
+手動でbucketのobject(index.html)を削除
+
+```
+pulumi up
+```
+
+なにも起きなかった(差分なし)
+
+```sh
+pulumi refresh
+```
+
+index.htmlがdeletedだよって言われた
+
+refreshをstatusに適用することができた
+
+https://app.pulumi.com/anoriqq/try-pulumi/dev/updates/14
+
+```
+pulumi up
+```
+
+定義した状態になった
