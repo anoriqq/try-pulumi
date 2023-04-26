@@ -73,3 +73,23 @@ drwxr-xr-x      - 2023-04-26 22:26  -N  ./
 .rw-r--r--     37 2023-04-26 22:26  -N ├──  Pulumi.dev.yaml
 .rw-r--r--     74 2023-04-26 22:26  -N └──  Pulumi.yaml
 ```
+
+```sh
+pulumi up
+```
+
+https://app.pulumi.com/anoriqq/try-pulumi/dev/updates/1
+
+add allow policy of S3-full-access to AWS user (Pulumi-aoba)
+
+create s3 bucket
+
+https://app.pulumi.com/anoriqq/try-pulumi/dev/updates/2
+
+create s3 bucket object
+
+https://app.pulumi.com/anoriqq/try-pulumi/dev/updates/3
+
+update s3 bucket object to website
+
+https://app.pulumi.com/anoriqq/try-pulumi/dev/updates/4
